@@ -1,3 +1,7 @@
 {
-  "java.project.sourcePaths": ["src", "58-Length-of-last-word_LeetCode"]
+  "java.project.sourcePaths": [
+    "src",
+    "58-Length-of-last-word_LeetCode",
+    "20-Valid-Parentheses_LeetCode"
+  ]
 }
