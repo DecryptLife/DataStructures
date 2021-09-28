@@ -2,6 +2,15 @@
   "java.project.sourcePaths": [
     "src",
     "58-Length-of-last-word_LeetCode",
-    "20-Valid-Parentheses_LeetCode"
+    "20-Valid-Parentheses_LeetCode",
+    "13-Roman-to-Integer_LeetCode",
+    "67-Add-Binary_LeetCode",
+    "121.Best-Time-to-Buy-and-Sell-Stock",
+    "9-Palindrome-Number_LeetCode",
+    "Redbus-Hiring-Challenge",
+    "28-Implement-strStr()_LeetCode",
+    "7-Reverse-Integer_LeetCode",
+    "12-Integer-to-Roman",
+    "GeeksForGeeks"
   ]
 }
