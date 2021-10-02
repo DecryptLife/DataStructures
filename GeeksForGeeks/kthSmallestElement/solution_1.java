@@ -3,11 +3,11 @@ package kthSmallestElement;
 public class solution_1 {
     static void merge(int[] arr, int low, int mid,int high)
     {
-        
+        System.out.println("Came for merging");
         int l_len = (mid-low)+1;
         int r_len = (high-mid);
-        // System.out.println("Left length: "+l_len+" Right length: "+r_len);
-        // System.out.println("Mid: "+mid);
+        System.out.println("Left length: "+l_len+" Right length: "+r_len);
+        System.out.println("Mid: "+mid);
 
         int[] larr = new int[l_len];
         int[] rarr = new int[r_len];
@@ -58,9 +58,17 @@ public class solution_1 {
         if(low<high)
         {
             mid = (low+high)/2;
+            System.out.println("\nLeft side");
+            System.out.println("Low: "+low+" Mid: "+mid);
             mergeSort(arr, low, mid);
+            System.out.println("\nRight side");
+            System.out.println("Mid: "+mid+" High: "+high);
             mergeSort(arr, mid+1, high);
+            System.out.println("\nMerging");
             merge(arr,low,mid,high);
+        }
+        else{
+            System.out.println("Low: "+low+" high: "+high);
         }
     }
     public static int kthSmallest(int[] arr, int l, int r, int k) 
