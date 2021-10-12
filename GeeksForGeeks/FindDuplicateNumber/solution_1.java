@@ -22,7 +22,5 @@ public class solution_1
         int[] nums = {3,1,3,4,2};
 
         System.out.println(findDuplicate(nums));
-
-        
     }
 }
