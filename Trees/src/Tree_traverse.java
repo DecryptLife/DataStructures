@@ -33,8 +33,8 @@ public class Tree_traverse {
     {
         if(root!=null)
         {
-            postorder(root.right);
             postorder(root.left);
+            postorder(root.right);
             System.out.print(root.key+" ");
         }
     }
