@@ -1,52 +1,65 @@
+import java.lang.management.MemoryType;
 import java.util.ArrayList;
 
 class MyStack{
 
-//    Normal arrays cannot do dynamic resizing, so we use ArrayList
     ArrayList<Integer> al = new ArrayList<>();
-
-    void push(int num)
+    int size = 0;
+    MyStack(int ele)
     {
-        al.add(num);
+        al.add(ele);
+        size+=1;
     }
 
-    int peek()
+    void push(int ele)
     {
-        return al.get(al.size()-1);
+        al.add(ele);
+        size+=1;
     }
 
     int pop()
     {
-        int res = al.get(al.size()-1);
-        al.remove(al.size()-1);
+        if(size == 0) {
+            System.out.println("No element to pop");
+            return -1;
+        }
+        int res = al.get(size-1);
+        al.remove(size-1);
+        size -=1;
         return res;
     }
 
-    int size()
+    int getSize()
     {
-        return al.size();
+        return size;
     }
 
     boolean isEmpty()
     {
-        return (al.size() == 0);
+        return size == 0 ? true: false;
     }
 
-}
-public class arrayList_stack {
-    public static void main(String[] args) {
-        MyStack s = new MyStack();
 
-        s.push(10);
+
+}
+public class arrayList_stack{
+    public static void main(String[] args) {
+
+        MyStack s = new MyStack(10);
+
         s.push(20);
         s.push(30);
 
-        System.out.println(s.peek());
-        System.out.println(s.size());
-        s.pop();
-        System.out.println(s.size());
-        s.push(5);
-        System.out.println(s.size());
-        System.out.println(s.peek());
+        System.out.println("Size of stack: "+s.getSize());
+        int a = s.pop();
+        System.out.println(a+" popped out");
+        int b = s.pop();
+        System.out.println(b+" popped out");
+        int c = s.pop();
+        int d = s.pop();
+        System.out.println(c+" popped out");
+        System.out.println("Size of stack: "+s.getSize());
+        System.out.println(s.isEmpty());
+
     }
 }
